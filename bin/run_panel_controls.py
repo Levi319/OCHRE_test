@@ -7,7 +7,7 @@ from ochre import Dwelling
 from bin.run_dwelling import dwelling_args
 from bin.run_multiple import compile_results
 
-# Example code for running an building with smart panel controls.
+# Example code for running a building with smart panel controls.
 
 main_output_path = dwelling_args.pop("output_path", os.getcwd())
 dwelling_args.update({
