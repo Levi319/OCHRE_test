@@ -17,9 +17,12 @@ from ochre import (
 from ochre import CreateFigures
 from ochre.Models.Envelope import Envelope
 from ochre.utils.schedule import import_weather
-from ochre.utils import default_input_path
+#from ochre.utils import default_input_path
 from bin.run_dwelling import dwelling_args
 
+#in replacement for default_input_path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+default_input_path = os.path.join(PROJECT_ROOT, "ochre", "defaults")
 
 # Example scripts to run single piece of equipment, including:
 #  - Equipment from a dwelling model (works for water heaters and PV)
@@ -399,13 +402,13 @@ if __name__ == "__main__":
     # run_equipment_from_house_model("PV")  # Must add PV in run_dwelling.py
 
     # Run equipment without a Dwelling model
-    run_ev()
+    # run_ev()
     # run_pv_with_sam()
     # run_battery_from_schedule()
     # run_battery_self_consumption()
     # run_water_heater()
     # run_water_heater_from_file()
-    # run_hvac()
+    run_hvac()
     # run_scheduled_load("Clothes Dryer")
     # run_scheduled_load("Cooking Range")
     # run_scheduled_load("Clothes Washer")

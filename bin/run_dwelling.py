@@ -3,8 +3,10 @@ import datetime as dt
 
 from ochre import Dwelling, CreateFigures
 # from ochre import Analysis
-from ochre.utils import default_input_path
+# Get project root (one level up from bin/)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+defaults_dir = os.path.join(PROJECT_ROOT, "ochre", "defaults")
 # Test script to run single Dwelling
 
 dwelling_args = {
@@ -18,12 +20,13 @@ dwelling_args = {
     # "time_zone": None,                          # option to specify daylight savings, in development
     #
     # Input files
-    "hpxml_file": os.path.join(default_input_path, "Input Files", "bldg0112631-up11.xml"),
-    "hpxml_schedule_file": os.path.join(
-        default_input_path, "Input Files", "bldg0112631_schedule.csv"
+    "hpxml_file": os.path.join(defaults_dir, "Input Files",
+                               "bldg0112631-up11.xml"),
+    "hpxml_schedule_file": os.path.join(defaults_dir, "Input Files",
+                                        "bldg0112631_schedule.csv"
     ),
-    "weather_file": os.path.join(
-        default_input_path, "Weather", "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
+    "weather_file": os.path.join(defaults_dir,"Weather",
+                                 "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
     ),
     # note: weather_path can be used when Weather Station is specified in HPXML file
     # "weather_path": weather_path,
