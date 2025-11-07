@@ -14,3 +14,6 @@ docs/_build
 *.code-workspace
 
 ochre/defaults/Input Files/OCHRE*
+bin/.ipynb_checkpoints/Arash_test-checkpoint.ipynb
+**/*.ipynb
+bin/.ipynb_checkpoints/user_tutorial-checkpoint.ipynb
